@@ -24,6 +24,7 @@ const addProduct = () => {
 </script>
 
 <template>
+  <h6>Add Product</h6>
   <v-form @submit.prevent="addProduct">
     <UiTextInputComponent v-model="inputTitle" :label="'Product name'" />
     <UiNumberInputComponent v-model="inputPrice" :label="'Product price'" />

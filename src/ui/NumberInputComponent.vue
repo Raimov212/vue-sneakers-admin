@@ -1,5 +1,5 @@
 <script setup>
-import { ref, defineEmits } from 'vue'
+import { ref } from 'vue'
 
 defineProps({
   modelValue: {
@@ -11,7 +11,6 @@ defineProps({
 
 const validNumber = ref(true)
 // eslint-disable-next-line vue/valid-define-emits
-const emit = defineEmits()
 
 const handleInput = (event) => {
   validNumber.value = true

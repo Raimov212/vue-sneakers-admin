@@ -66,6 +66,19 @@ export const useTodosStore = defineStore('todos', {
       this.filters.searchQuery = value
 
       await this.fetchData()
+    },
+    async editProduct(itemCurrentId: string, obj: any) {
+      console.log('itemCurrentId', itemCurrentId)
+      try {
+        const res = await axios.patch(
+          `https://01b49c08aa7e0ce4.mokky.dev/sneakers/${itemCurrentId}`,
+          obj
+        )
+        console.log(res)
+      } catch (error) {
+        console.log(error)
+      }
+      await this.fetchData()
     }
   },
   getters: {

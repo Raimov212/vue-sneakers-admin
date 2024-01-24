@@ -79,6 +79,7 @@ const getTotalCountTodos = computed(() => {
           :title="item.title"
           :price="item.price"
           :isWatched="item.isWatched"
+          :allTodos="todos"
         />
       </div>
       <div class="card-box" v-else>
@@ -90,6 +91,7 @@ const getTotalCountTodos = computed(() => {
           :title="item.title"
           :price="item.price"
           :isWatched="item.isWatched"
+          :allTodos="todos"
         />
       </div>
     </div>

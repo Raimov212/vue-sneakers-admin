@@ -56,22 +56,27 @@ export default router
 export const RouterList: RouteType[] = [
   {
     title: 'Homepage',
-    path: '/'
+    path: '/',
+    icon: 'mdi mdi-home-variant'
   },
   {
     title: 'Profile',
-    path: '/profile'
+    path: '/profile',
+    icon: 'mdi mdi-account-cog'
   },
   {
     title: 'Users',
-    path: '/users'
+    path: '/users',
+    icon: 'mdi mdi-account-box'
   },
   {
     title: 'Products',
-    path: '/products'
+    path: '/products',
+    icon: 'mdi mdi-cart'
   },
   {
     title: 'Orders',
-    path: '/orders'
+    path: '/orders',
+    icon: 'mdi mdi-cart-arrow-right'
   }
 ]

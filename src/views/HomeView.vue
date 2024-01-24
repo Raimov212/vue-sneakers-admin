@@ -71,14 +71,20 @@ export default {
               :key="index"
               :to="item.path"
             >
-              <v-list-item :title="item.title" :value="item.title"> </v-list-item>
+              <v-list-item
+                class="list-icon"
+                :title="item.title"
+                :class="item.icon"
+                :value="item.title"
+              >
+              </v-list-item>
             </router-link>
 
             <v-list-item>
               <v-btn @click="signOut" class="btn" variant="outlined">Sign Out </v-btn>
             </v-list-item>
             <v-list-item>
-              <div v-if="this.dateTime.day" class="date">
+              <div v-if="dateTime.day" class="date">
                 {{ dateTime.day }}/{{ dateTime.month }}/{{ dateTime.year }}
               </div>
             </v-list-item>
@@ -94,7 +100,11 @@ export default {
 .container {
   display: flex;
 }
-
+.list-icon {
+  margin-right: 10px;
+  font-size: 20px;
+  size: 0px;
+}
 .route {
   outline: none;
   text-decoration: none;
