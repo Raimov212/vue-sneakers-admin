@@ -11,8 +11,8 @@ const store = useUserStore()
 
 const { fetchDataUser } = store
 
-const getUserClientFirebase = () => {
-  getAuth().onAuthStateChanged((user) => {
+const getUserClientFirebase = async () => {
+  await getAuth().onAuthStateChanged((user) => {
     console.log('user', user)
     user.providerData.forEach((item) => {
       clientUser.value.push(item)
