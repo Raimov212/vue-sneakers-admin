@@ -11,7 +11,7 @@
   "compilerOptions": {
     "types": ["@types/node", "vuetify", "vite/client"],
     "module": "esnext",
-    "moduleResolution": "node",
-    "allowJs": true
+    "moduleResolution": "node"
+    // "allowJs": true
   }
 }

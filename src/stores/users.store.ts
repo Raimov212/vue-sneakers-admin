@@ -10,7 +10,6 @@ export const useUserStore = defineStore('users', {
     async fetchDataUser() {
       try {
         const { data } = await axios.get('https://01b49c08aa7e0ce4.mokky.dev/users')
-        console.log('store', data)
         if (data) {
           this.users = data
         }

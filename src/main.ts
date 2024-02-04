@@ -2,7 +2,7 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-// import { firebase } from './api/firebase'
+import { firebase } from './api/firebase'
 
 import '@mdi/font/css/materialdesignicons.css'
 
@@ -25,7 +25,7 @@ const pinia = createPinia()
 app.use(router)
 app.use(vuetify)
 app.use(pinia)
-// app.use(firebase)
+app.use(firebase as any)
 
 app.config.performance = true
 
