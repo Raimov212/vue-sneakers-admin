@@ -1,10 +1,9 @@
 <script setup>
 import { useUserStore } from '@/stores/users.store'
-import { computed, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import TableUser from '../components/Users/TableUser.vue'
 import { getAuth } from 'firebase/auth'
 import axios from 'axios'
-import { watch } from 'vue'
 
 const clientUser = ref([])
 
@@ -14,6 +13,7 @@ const { fetchDataUser } = store
 
 const getUserClientFirebase = () => {
   getAuth().onAuthStateChanged((user) => {
+    console.log('user', user)
     user.providerData.forEach((item) => {
       clientUser.value.push(item)
     })
